@@ -16,32 +16,25 @@ La salida corresponde a los siguientes datos del suscriptor (cedula, tipo plan):
 import Cl_Agencia from "./Cl_Agencia.js";
 import Cl_Suscriptor from "./Cl_Suscriptor.js";
 
-// Objeto suscriptor
-
+let agencia=new Cl_Agencia();    
 let s1=new Cl_Suscriptor(15457858,"A");
 let s2=new Cl_Suscriptor(15457859,"B");
-let s3=new Cl_Suscriptor(15457667,"C");
+let s3=new Cl_Suscriptor(15457667,"C");      
 
-// Objeto agencia
+agencia.procesarSuscriptor(s1);
+agencia.procesarSuscriptor(s2);
+agencia.procesarSuscriptor(s3);      
 
-let a=new Cl_Agencia();
-
-// Procesar los suscriptores
-
-a.procesarSuscriptor(s1);
-a.procesarSuscriptor(s2);
-a.procesarSuscriptor(s3);
-
+alert(`El suscriptor con cedula ${s1.cedula} paga ${s1.precioPgar()}$ `); 
+alert(`El suscriptor con cedula ${s2.cedula} paga ${s2.precioPgar()}$ `); 
+alert(`El suscriptor con cedula ${s3.cedula} paga ${s3.precioPgar()}$ `); 
+alert(`Porcentaje de suscriptores que no pagaron servicio de conexión: ${agencia.porcentajeSusC()}% `); 
+alert(`Cuál es el plan favorito: ${agencia.planFavorito()}`);   
 let salida=document.getElementById("salida");
-salida.innerHTML=`
+salida.innerHTML=`  
 <br> El suscriptor con cedula ${s1.cedula} paga ${s1.precioPgar()}$ 
-<br> El suscriptor con cedula ${s2.cedula} paga ${s2.precioPgar()}$ 
+<br> El suscriptor con cedula ${s2.cedula} paga ${s2.precioPgar()}$     
 <br> El suscriptor con cedula ${s3.cedula} paga ${s3.precioPgar()}$ 
-<br> Porcentaje de suscriptores que no pagaron servicio de conexión: ${a.porcentajeSusC()}% 
-<br> Cuál es el plan favorito: ${a.planFavorito()}
-`
-alert(`El suscriptor con cedula ${s1.cedula()} paga ${s1.precioPgar()}$ `); 
-alert(`El suscriptor con cedula ${s2.cedula()} paga ${s2.precioPgar()}$ `); 
-alert(`El suscriptor con cedula ${s3.cedula()} paga ${s3.precioPgar()}$ `); 
-alert(`Porcentaje de suscriptores que no pagaron servicio de conexión: ${a.porcentajeSusC()}% `); 
-alert(`Cuál es el plan favorito: ${a.planFavorito()}`); 
+<br> Porcentaje de suscriptores que no pagaron servicio de conexión: ${agencia.porcentajeSusC()}% 
+<br> Cuál es el plan favorito: ${agencia.planFavorito()}
+`;
