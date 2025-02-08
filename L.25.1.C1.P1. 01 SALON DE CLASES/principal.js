@@ -17,7 +17,9 @@ sal.procesarEstudiante(est1);
 sal.procesarEstudiante(est2);
 sal.procesarEstudiante(est3);
 sal.procesarEstudiante(est4);
-
+alert(`La edad promedio es de ${sal.edadPromedio()} % `); 
+alert(`El mayor estudiante es ${sal.mayorEstudiante()}`);
+alert(`El porcentaje de chicas mayores es de ${sal.chicasMayor()}`);    
 let salida=document.getElementById("salida");
 salida.innerHTML=`
 <br> La edad promedio es de ${sal.edadPromedio()} % 
