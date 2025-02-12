@@ -9,11 +9,11 @@ export default class Cl_Vehiculo{
   get tipo(){return this._tipo;}
   tarifaPagar(){
     if(this.tipo==1){
-      return 'su tarifa a pagar es de 10'
+      return 10
     }
     else if(this.tipo==2){
-      return 'Su tarifa a pagar es de 20'
+      return 20
     }
-    else {return 'Su tarifa a Pagar es de 50'}
+    else {return 50}
   }
 }
