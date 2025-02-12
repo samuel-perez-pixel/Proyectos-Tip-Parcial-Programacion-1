@@ -26,6 +26,8 @@ salida.innerHTML=`
 <br> El vehiculo de placa ${v2.placa} tiene una tarifa de ${v2.tarifaPagar()} 
 <br> El vehiculo de placa ${v3.placa} tiene una tarifa de ${v3.tarifaPagar()} 
 <br> El vehiculo de placa ${v4.placa} tiene una tarifa de ${v4.tarifaPagar()} 
+<br> Porcentaje de vehiculos particulares: ${peaje.porcentajeParticular()}
+<br> Porcentaje de vehiculos de transporte: ${peaje.porcentajeTransporte()}
+<br> Porcentaje de vehiculos de carga: ${peaje.porcentajeCarga()}
 <br> Partida Municipal: ${peaje.montoMunicipal()}
-<br> Porcentaje de vehiculos particulares: ${peaje.porcentaje()}
 `; 
