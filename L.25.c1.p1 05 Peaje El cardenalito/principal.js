@@ -11,16 +11,23 @@ peaje.procesarVehiculo(v1);
 peaje.procesarVehiculo(v2);
 peaje.procesarVehiculo(v3);
 peaje.procesarVehiculo(v4); 
-alert(`El vehiculo de placa ${v1.placa} tiene una tarifa de ${v1.puntajeFinal()}`);
-alert(`El participante ${j2.nombre} tiene una puntuación de ${j2.puntajeFinal()}`);
-alert(`El participante ${j3.nombre} tiene una puntuación de ${j3.puntajeFinal()}`); 
-alert(`Nombre del ganador: ${juego.Ganador()}`);
-alert(`Porcentaje de jugadores con menos de 10 puntos: ${juego.porcMenos10()}`);    
+alert(`El vehiculo de placa ${v1.placa} tiene una tarifa de ${v1.tarifaPagar()}`);
+alert(`El vehiculo de placa ${v2.placa} tiene una tarifa de ${v2.tarifaPagar()}`);
+alert(`El vehiculo de placa ${v3.placa} tiene una tarifa de ${v3.tarifaPagar()}`);
+alert(`El vehiculo de placa ${v4.placa} tiene una tarifa de ${v4.tarifaPagar()}`);
+
+alert(`Porcentaje de vehiculos particulares: ${peaje.porcentajeParticular()}`);
+alert(`Porcentaje de vehiculos de Transporte: ${peaje.porcentajeTransporte()}`); 
+alert(`Porcentaje de vehiculos de carga: ${peaje.porcentajeCarga()}`); 
+alert(`Partida Municipal: ${peaje.montoMunicipal()}`); 
 let salida=document.getElementById("salida");
 salida.innerHTML=`  
-<br> El participante ${j1.nombre} tiene una puntuación de ${j1.puntajeFinal()}  
-<br> El participante ${j2.nombre} tiene una puntuación de ${j2.puntajeFinal()}     
-<br> El participante ${j3.nombre} tiene una puntuación de ${j3.puntajeFinal()} 
-<br> Nombre del ganador: ${juego.Ganador()}
-<br> Porcentaje de jugadores con menos de 10 puntos: ${juego.porcMenos10()}
+<br> El vehiculo de placa ${v1.placa} tiene una tarifa de ${v1.tarifaPagar()}  
+<br> El vehiculo de placa ${v2.placa} tiene una tarifa de ${v2.tarifaPagar()} 
+<br> El vehiculo de placa ${v3.placa} tiene una tarifa de ${v3.tarifaPagar()} 
+<br> El vehiculo de placa ${v4.placa} tiene una tarifa de ${v4.tarifaPagar()} 
+<br> Porcentaje de vehiculos particulares: ${peaje.porcentajeParticular()}
+<br> Porcentaje de vehiculos de transporte: ${peaje.porcentajeTransporte()}
+<br> Porcentaje de vehiculos de carga: ${peaje.porcentajeCarga()}
+<br> Partida Municipal: ${peaje.montoMunicipal()}
 `; 
