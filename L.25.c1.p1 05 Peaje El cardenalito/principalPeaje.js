@@ -16,7 +16,10 @@ alert(`El vehiculo de placa ${v2.placa} tiene una tarifa de ${v2.tarifaPagar()}`
 alert(`El vehiculo de placa ${v3.placa} tiene una tarifa de ${v3.tarifaPagar()}`);
 alert(`El vehiculo de placa ${v4.placa} tiene una tarifa de ${v4.tarifaPagar()}`);
 
-alert(`Porcentaje de vehiculos particulares: ${peaje.porcentajeParticular()}`);    
+alert(`Porcentaje de vehiculos particulares: ${peaje.porcentajeParticular()}`);
+alert(`Porcentaje de vehiculos de Transporte: ${peaje.porcentajeTransporte()}`); 
+alert(`Porcentaje de vehiculos de carga: ${peaje.porcentajeCarga()}`); 
+alert(`Partida Municipal: ${peaje.porcentajeParticular()}`); 
 let salida=document.getElementById("salida");
 salida.innerHTML=`  
 <br> El participante ${j1.nombre} tiene una puntuación de ${j1.puntajeFinal()}  
